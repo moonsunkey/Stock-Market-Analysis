@@ -17,11 +17,11 @@ Create a script that loops through all the stocks for one year and outputs the f
     * **Part 1:** 
   Break the problem down to 3 subroutines and 2 summary tables to hold the results: 
   
-  1) Get total stock volume. There are two senarios-same or different ticker between the row and the next row. If the next row ticker is different to the prior row, loop through each row to sum up volume of the same ticker. Need to reset volume at 0 for the second scenario. 
+  1) Get total stock volume. Solved this one first because if its similarity to the credit card activity. Find out the next ticker that's different from the previous one, then add up the total up to the row of the same ticker. Loop through the same process to find total volume for each ticker.
   
-  2) Get value of the open price and close price of first and last day of the year for each ticker respectively; perform mathematical functions to calculate price changes and percentage changes; Apply conditionall formatting for positive yearly changes highlight in green and negative in red. Need to use number format function to have a percentage with double decimal points. 
-
+  2) The key to yearly change value and percentage is to find values of the opening price of the first day of the year and the closing price of the last day of the year. It takes me a long time to figure out. The previous approach was to try to grab the date and then find price for that date but I had no clue how to do that. Instead, with the help of the tutor, just like the previous part, first date started from row 2 and check if the next row is the same ticker to the previous one. If not, then the last value is at the row where it stopped being the same ticker. Then using loop these values can be found one by one. The mathematical function is the easier portion. But since there is division involved, this scenario was listed out to avoid error. The conditional formatting was the easiest part of the problem since there are only two scenarios with a simple ">0" or "0" logic.
+  3) Finding greatest is to find max and min in terms of percentage and max volume. Apply loops to compare the value at each row. I made mistakes in the beginning to mess up the rows and columns count where the required values are supposed to be held.
   * **Part 2:** Use for each worksheet loop to run all worksheets at once.
-  * **Part 3:** Consolidate all subroutines to run at once. 
+  * **Part 3:** Consolidate all subroutines to run at once. Also created a button for the macro and a message box.
 
-*** Notes: Make sure to test on the testing dataset, otherwise it takes a long time to run the codes.
+*** Notes: It was much easier to test on the testing dataset, otherwise it takes a long time to run the codes.
